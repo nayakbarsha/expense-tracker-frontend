@@ -1,0 +1,73 @@
+<div class="container mt-4">
+    <h2 class="mb-3">Add New Expense</h2>
+  
+    <form (ngSubmit)="saveExpense()" #expenseForm="ngForm">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          id="title"
+          class="form-control"
+          [(ngModel)]="expense.title"
+          name="title"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          id="description"
+          class="form-control"
+          [(ngModel)]="expense.description"
+          name="description"
+          required
+        ></textarea>
+      </div>
+  
+      <div class="mb-3">
+        <label for="amount" class="form-label">Amount</label>
+        <input
+          type="number"
+          id="amount"
+          class="form-control"
+          [(ngModel)]="expense.amount"
+          name="amount"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="date" class="form-label">Date</label>
+        <input
+          type="date"
+          id="date"
+          class="form-control"
+          [(ngModel)]="expense.date"
+          name="date"
+          required
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-success">Save</button>
+      <a routerLink="/" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true" (hidden.bs.modal)="onModalHidden()">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title w-100" id="successModalLabel">Expense Added</h5>
+          </div>
+          <div class="modal-body">
+            Your expense was added successfully!
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  
