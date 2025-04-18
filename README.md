@@ -16,3 +16,16 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 7.HTTPClientModule – for communication with the backend API
 
+## Usage
+
+Clone it :
+
+```
+$ git clone https://github.com/nayakbarsha/Thread_Hive-Frontend.git
+```
+
+Visit the page at : 
+
+```
+https://expense-tracker-frontend-pi-eight.vercel.app/
+```
