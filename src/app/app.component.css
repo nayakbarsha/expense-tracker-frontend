@@ -1,0 +1,9 @@
+.heading{
+    color: darkblue;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #00ffc3, #4d01e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
